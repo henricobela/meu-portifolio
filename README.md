@@ -1,5 +1,3 @@
-Claro! Abaixo está um exemplo de README que você pode usar para o seu repositório de portfólio:
-
 ---
 
 # Portfólio de Desenvolvimento e Ciência de Dados
