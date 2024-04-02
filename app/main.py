@@ -10,6 +10,6 @@ with st.sidebar:
     selected
 
 
-st.header("Portfolio")
+st.header(selected)
 
 
