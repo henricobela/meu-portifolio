@@ -6,7 +6,8 @@ from streamlit_option_menu import option_menu
 
 
 selected = option_menu("Main Menu", ["Home", 'Settings'], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1)
+        icons=['house', 'gear'], menu_icon="cast", default_index=1,
+        orientation="horizontal")
 
 st.header(selected)
 
