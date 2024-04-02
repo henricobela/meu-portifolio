@@ -15,4 +15,6 @@ selected = option_menu("Main Menu", ["Home", 'Settings'],
 
 st.header(selected)
 
+#todo: listagem das opções do menu
+
 
