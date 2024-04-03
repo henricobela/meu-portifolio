@@ -10,7 +10,7 @@ default_set_page_config()
 
 
 selected = option_menu("Main Menu", ["Home", "Model 1", "Model 2", "Model 3", 'Settings', ], 
-        icons=['house', 'gear'], menu_icon="cast", default_index=1,
+        icons=['house', 'activity', 'cash-stack', 'currency-dollar','gear'], menu_icon="cast", default_index=1,
         orientation="horizontal")
 
 
