@@ -20,27 +20,24 @@ col_p, col_s, col_t = st.columns([1, 2, 3])
 with col_p:
         st.image("app/utils/imgs/logotipo.svg")
 
+with col_s:
+        if selected == "Home":
+                home()
+        elif selected == "About me":
+                about_page()
+        elif selected == "Model 1":
+                breast_page()
+        elif selected == "Model 2":
+                cv_page()
+        elif selected == "Model 3":
+                rentals_page()
+        elif selected == "Settings":
+                settings()
+        elif selected == "Contact":
+                contact_me_page()
 
-if selected == "Home":
-        home()
-
-elif selected == "About me":
-        about_page()
-
-elif selected == "Model 1":
-        breast_page()
-
-elif selected == "Model 2":
-        cv_page()
-
-elif selected == "Model 3":
-        rentals_page()
-
-elif selected == "Settings":
-        settings()
-
-elif selected == "Contact":
-        contact_me_page()
+with col_t:
+        st.button("Dummy Button")
 
 
 
