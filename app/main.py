@@ -1,6 +1,4 @@
 import streamlit as st
-import numpy as np
-import pandas as pd
 from utils.config_page import default_set_page_config
 from streamlit_option_menu import option_menu
 from page_functions.home_page import home
