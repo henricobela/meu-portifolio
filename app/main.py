@@ -12,10 +12,7 @@ from page_functions.settings_page import settings
 
 default_set_page_config()
 
-
-selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact', ], 
-               icons=['house', 'terminal', 'activity', 'eye', 'currency-dollar', 'gear', 'telephone-forward'])
-
+selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'])
 
 if selected == "Home":
         home()
