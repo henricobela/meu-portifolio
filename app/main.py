@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 from utils.config_page import default_set_page_config
 from streamlit_option_menu import option_menu
+from page_functions.home import home
 
 
 
@@ -16,8 +17,7 @@ selected = option_menu("linkedin.com/in/henricobela",
 
 
 if selected == "Home":
-        st.header(selected)
-        st.subheader("Here we are Home")
+        home()
 
 elif selected == "About me":
         st.header(selected)
