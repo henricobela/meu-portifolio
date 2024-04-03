@@ -9,9 +9,9 @@ from streamlit_option_menu import option_menu
 default_set_page_config()
 
 
-selected = option_menu(" ", 
+selected = option_menu("More info, contact me!", 
                        ["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact', ], 
-        icons=['house', 'terminal', 'activity', 'eye', 'currency-dollar', 'gear', 'telephone-forward'], menu_icon="cast", default_index=1,
+        icons=['house', 'terminal', 'activity', 'eye', 'currency-dollar', 'gear', 'telephone-forward'], menu_icon="info", default_index=1,
         orientation="horizontal")
 
 
