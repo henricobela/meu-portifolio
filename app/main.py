@@ -15,7 +15,7 @@ default_set_page_config(path_icon = path_logo)
 
 
 
-selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'], logo_path = path_logo)
+selected = st_navbar(["Home", "About me", "Breast Model", "CV Model", "Rentals Model", 'Settings', 'Contact'], logo_path = path_logo)
 
 
 _, col_s, _ = st.columns([1, 2, 3])
@@ -28,11 +28,11 @@ with col_s:
                 home()
         elif selected == "About me":
                 about_page()
-        elif selected == "Model 1":
+        elif selected == "Breast Model":
                 breast_page()
-        elif selected == "Model 2":
+        elif selected == "CV Model":
                 cv_page()
-        elif selected == "Model 3":
+        elif selected == "Rentals Model":
                 rentals_page()
         elif selected == "Settings":
                 settings()
