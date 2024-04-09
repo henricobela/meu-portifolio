@@ -18,10 +18,10 @@ default_set_page_config(path_icon = path_logo)
 selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'], logo_path = path_logo)
 
 
-col_p, col_s, _ = st.columns([1, 2, 3])
+_, col_s, _ = st.columns([1, 2, 3])
 
-with col_p:
-        st.image(path_logo)
+# with col_p:
+#         st.image(path_logo)
 
 with col_s:
         if selected == "Home":
@@ -38,9 +38,6 @@ with col_s:
                 settings()
         elif selected == "Contact":
                 contact_me_page()
-
-
-st.button("Dummy Button")
 
 
 
