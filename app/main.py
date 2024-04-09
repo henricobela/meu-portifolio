@@ -12,13 +12,13 @@ from page_functions.settings_page import settings
 
 default_set_page_config()
 
-selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'], logo_path = "app/utils/imgs/logotipo_sem_escrito.svg")
+selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'], logo_path = "utils/imgs/logotipo_sem_escrito.svg")
 
 
 col_p, col_s, _ = st.columns([1, 2, 3])
 
 with col_p:
-        st.image("app/utils/imgs/logotipo.svg")
+        st.image("utils/imgs/logotipo.svg")
 
 with col_s:
         if selected == "Home":
