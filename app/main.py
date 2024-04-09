@@ -1,5 +1,5 @@
 import streamlit as st
-from utils.config_page import default_set_page_config
+from utils.config_page import default_set_page_config, localize_path_logo
 from streamlit_navigation_bar import st_navbar
 from page_functions.home_page import home
 from page_functions.about_me_page import about_page
@@ -10,15 +10,18 @@ from page_functions.contact_page import contact_me_page
 from page_functions.settings_page import settings
 
 
-default_set_page_config()
+path_logo = localize_path_logo()
+default_set_page_config(path_icon = path_logo)
 
-selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'], logo_path = "app/utils/imgs/logotipo_sem_escrito.svg")
+
+
+selected = st_navbar(["Home", "About me", "Model 1", "Model 2", "Model 3", 'Settings', 'Contact'], logo_path = path_logo)
 
 
 col_p, col_s, _ = st.columns([1, 2, 3])
 
 with col_p:
-        st.image("app/utils/imgs/logotipo.svg")
+        st.image(path_logo)
 
 with col_s:
         if selected == "Home":
