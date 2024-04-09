@@ -1,4 +1,4 @@
 import streamlit as st
 
 def cv_page():
-    st.header("Computer Vision Page")
+    st.header("Development stage")
