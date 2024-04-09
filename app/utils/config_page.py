@@ -8,8 +8,11 @@ def localize_path_logo():
         "path_two": "utils/imgs/logotipo_sem_escrito.svg"}
     
     for path in path_to_logo.values():
-        if open(path):
+        try:
+            open(path)
             path_logo = path
+        except:
+            continue
     return path_logo
 
 def default_set_page_config(path_icon):
