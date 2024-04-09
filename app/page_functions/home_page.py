@@ -1,9 +1,23 @@
 import streamlit as st
 
+def localize_path_logo():
+    path_logo = ""
+    path_to_logo = {
+        "path_one": "app/utils/imgs/me.png",
+        "path_two": "utils/imgs/me.png"}
+    
+    for path in path_to_logo.values():
+        try:
+            open(path)
+            path_logo = path
+        except:
+            continue
+    return path_logo
+
 def home():
     col_img, col_txt = st.columns([1, 2])
     with col_img:
-        st.image("utils/imgs/me.png")
+        st.image(localize_path_logo())
     with col_txt:
         st.header("Henrico Nardelli Bela")
         st.subheader("Data Scientist")
