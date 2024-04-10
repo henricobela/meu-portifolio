@@ -18,9 +18,6 @@ selected = st_navbar(["Home", "About me", "Models", 'Settings', 'Contact'], logo
 
 _, col_s, _ = st.columns([1, 2, 1])
 
-# with col_p:
-#         st.image(path_logo)
-
 with col_s:
         if selected == "Home":
                 home()
