@@ -19,8 +19,4 @@ def models_page():
     with tab_rentals:
         st.text("Dev")        
 
-    #todo: decide which is better, tabs or select box, then, do the page models, then, do the models
-    #todo: do the page models
-    #todo: do the models
-
 
