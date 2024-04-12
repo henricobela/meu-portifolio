@@ -1,2 +1,5 @@
 streamlit-option-menu
 streamlit-navigation-bar
+scikit-learn
+seaborn
+matplotlib
