@@ -9,6 +9,7 @@ def breast_page():
     feature_names = []
     data = []
     df = pd.read_csv("app/models/breast/values_min_max.csv")
+    df = df.drop(columns = ["target"])
     with open(feature_names_path, 'r') as f:
         for line in f:
             feature_name = line.strip()
