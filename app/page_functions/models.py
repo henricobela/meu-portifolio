@@ -1,4 +1,5 @@
 import streamlit as st
+from page_functions.model_breast_page import breast_page
 
 
 def models_page():
@@ -11,11 +12,12 @@ def models_page():
     tab_breast, tab_cv, tab_rentals = st.tabs(["Breast", "Computer Vision", "Rentals"])
 
     with tab_breast:
-        st.text("Breast")
+        st.text("Dev")
+        breast_page()
     with tab_cv:
-        st.text("Computer Vision")
+        st.text("Dev")
     with tab_rentals:
-        st.text("Rentals")        
+        st.text("Dev")        
 
     #todo: decide which is better, tabs or select box, then, do the page models, then, do the models
     #todo: do the page models
