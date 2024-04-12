@@ -23,7 +23,7 @@ def breast_page():
     col1, col2, col3, col4, col5 = st.columns(5)
 
     # Iterar sobre as colunas do DataFrame e adicionar controles deslizantes a cada coluna
-    for i, (nome_coluna, serie) in enumerate(df.iteritems()):
+    for i, (nome_coluna, serie) in enumerate(df.items()):
         with locals()[f'col{(i % 5) + 1}']:
             st.slider(nome_coluna, min_value=serie.min(), max_value=serie.max(), value=(serie.min(), serie.max()))
 
