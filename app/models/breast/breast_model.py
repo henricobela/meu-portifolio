@@ -8,7 +8,9 @@ class Model:
     def __init__(self, model_path):
         with open(model_path, 'rb') as f:
             self.model = pickle.load(f)
-        self.scaler = StandardScaler()
+            
+        with open("app/models/breast/scaler.pkl", 'rb') as f:
+            self.scaler = pickle.load(f)
 
     def predict(self, input_data):
         input_data_as_numpy_array = np.asarray(input_data)
