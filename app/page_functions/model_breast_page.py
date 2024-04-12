@@ -7,7 +7,7 @@ def breast_page():
 
     feature_names_path = "app/models/breast/feature_names.txt"
     feature_names = []
-    data = ()
+    data = []
     df = pd.read_csv("app/models/breast/values_min_max.csv")
     with open(feature_names_path, 'r') as f:
         for line in f:
