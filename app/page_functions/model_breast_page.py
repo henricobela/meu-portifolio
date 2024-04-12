@@ -5,10 +5,10 @@ from models.breast.breast_model import *
 
 def breast_page():
 
-    feature_names_path = "feature_names.txt"
+    feature_names_path = "app/models/breast/feature_names.txt"
     feature_names = []
     data = ()
-    df = pd.read_csv("values_min_max.csv")
+    df = pd.read_csv("app/models/breast/values_min_max.csv")
     with open(feature_names_path, 'r') as f:
         for line in f:
             feature_name = line.strip()
