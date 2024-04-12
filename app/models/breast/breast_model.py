@@ -1,22 +1,18 @@
+import pickle
+import numpy as np
+from sklearn.preprocessing import StandardScaler
 
 
-def predict_on_new_data(input_data):
-    input_data_as_numpy_array = np.asarray(input_data)
+class Model:
+    
+    def __init__(self, model_path):
+        with open(model_path, 'rb') as f:
+            self.model = pickle.load(f)
+        self.scaler = StandardScaler()
 
-    # reshape the numpy array as we are predicting for one data point
-    input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
-
-    # standardizing the input data
-    input_data_std = scaler.transform(input_data_reshaped)
-
-    prediction = model.predict(input_data_std)
-    print(prediction)
-
-    prediction_label = [np.argmax(prediction)]
-    print(prediction_label)
-
-    if(prediction_label[0] == 0):
-        print('The tumor is Malignant')
-
-    else:
-        print('The tumor is Benign')
+    def predict(self, input_data):
+        input_data_as_numpy_array = np.asarray(input_data)
+        input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
+        input_data_std = self.scaler.transform(input_data_reshaped)
+        prediction = self.model.predict(input_data_std)
+        return prediction
