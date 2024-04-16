@@ -20,15 +20,26 @@ def breast_page():
             feature_name = line.strip()
             feature_names.append(feature_name)
     
-    
+    #sidebar
     with st.sidebar:
         st.markdown("---")
-        st.info("Here you found the caracteristics which can determinate if a breast cancer is Malign or Benign. Please use the sliders to send the informations to model and get the results.")
+        st.info("Info: Here you found the caracteristics which can determinate if a breast cancer is Malign or Benign. Please use the sliders to send the informations to model and get the results.")
         for f_name in feature_names:
             string_f_name = f_name.title()
             value = st.slider(f"{string_f_name}: ", min_value = df[f_name].min(), max_value = df[f_name].max())
             data.append(value)
 
+    
+    #middlepage
+    st.markdown("---")
+    st.header("Breast Cancer Predictor")
+    st.text("This model will predict if the Breast Cancer is Benign or Malign according with the sidebar informations.")
+
+    
+
     model = Model(model_path)
-    y_pred = model.predict(data)
-    st.header(y_pred)
+    prediction = model.predict(data)
+    if prediction == True:
+        st.subheader("Prediction: Malign!")
+    else:
+        st.subheader("Prediction: Benign!")

@@ -22,4 +22,7 @@ class Model:
         input_data_reshaped = input_data_as_numpy_array.reshape(1, -1)
         input_data_std = self.scaler.transform(input_data_reshaped)
         prediction = self.model.predict(input_data_std)
-        return prediction
+        if prediction == 0:
+            return True
+        else:
+            return False

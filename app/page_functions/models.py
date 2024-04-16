@@ -6,10 +6,7 @@ from page_functions.model_rentals_page import rentals_page
 
 def models_page():
 
-    st.info("Welcome to the page that contains all models built by me!"+
-                 "\nThese models was developed using some algorithms libraries, such as "+
-                 "OpenCV, Scikit Learn, Tensorflow, Keras, Pytorch, and more! "+
-                 "\nFeel free to contact me to ask questions and chat!")    
+    st.info("Info: Here we have a sidebar to select which model to use, feel free to test every model. They was developed by me, using some libs like sklearn and tensorflow.")    
 
     st.sidebar.title("Models")
     page = st.sidebar.selectbox("Select the model", ["Breast", "Computer Vision", "Rentals"])
