@@ -20,7 +20,10 @@ def breast_page():
             feature_name = line.strip()
             feature_names.append(feature_name)
     
+    
     with st.sidebar:
+        st.markdown("---")
+        st.info("Here you found the caracteristics which can determinate if a breast cancer is Malign or Benign. Please use the sliders to send the informations to model and get the results.")
         for f_name in feature_names:
             string_f_name = f_name.title()
             value = st.slider(f"{string_f_name}: ", min_value = df[f_name].min(), max_value = df[f_name].max())

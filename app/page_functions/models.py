@@ -11,8 +11,8 @@ def models_page():
                  "OpenCV, Scikit Learn, Tensorflow, Keras, Pytorch, and more! "+
                  "\nFeel free to contact me to ask questions and chat!")    
 
-    st.sidebar.title("Sidebar")
-    page = st.sidebar.radio("Select Page", ["Breast", "Computer Vision", "Rentals"])
+    st.sidebar.title("Models")
+    page = st.sidebar.selectbox("Select the model", ["Breast", "Computer Vision", "Rentals"])
 
     if page == "Breast":
         breast_page()
