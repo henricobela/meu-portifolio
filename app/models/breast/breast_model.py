@@ -1,6 +1,7 @@
 import pickle
 import numpy as np
 from sklearn.preprocessing import StandardScaler
+from utils.config_page import *
 
 
 class Model:
@@ -8,8 +9,12 @@ class Model:
     def __init__(self, model_path):
         with open(model_path, 'rb') as f:
             self.model = pickle.load(f)
-            
-        with open("app/models/breast/scaler.pkl", 'rb') as f:
+        
+
+        scaler_path = localize_right_path({"scaler_path": "app/models/breast/scaler.pkl",
+                                           "scaler_path2": "models/breast/scaler.pkl"})
+
+        with open(scaler_path, 'rb') as f:
             self.scaler = pickle.load(f)
 
     def predict(self, input_data):
