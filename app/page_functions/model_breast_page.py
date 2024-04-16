@@ -33,13 +33,13 @@ def breast_page():
     #middlepage
     st.markdown("---")
     st.header("Breast Cancer Predictor")
-    st.text("This model will predict if the Breast Cancer is Benign or Malign according with the sidebar informations.")
+    st.write("This model will predict if the Breast Cancer is Benign or Malign according with the sidebar informations.")
 
     
 
     model = Model(model_path)
     prediction = model.predict(data)
     if prediction == True:
-        st.subheader("Prediction: Malign!")
+        st.error("Prediction: Malign!")
     else:
-        st.subheader("Prediction: Benign!")
+        st.success("Prediction: Benign!")
