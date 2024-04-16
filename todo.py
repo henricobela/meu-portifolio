@@ -1,5 +1,4 @@
-#do the breast page with input data to select by users
-
-#do the sliders, and improve they view
-#improve breast page view
+# do the about me page
+# do the settings page (still need?)
+# do the contact page.
 
