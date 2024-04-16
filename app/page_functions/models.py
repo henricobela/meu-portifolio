@@ -9,29 +9,7 @@ def models_page():
     st.info("Welcome to the page that contains all models built by me!"+
                  "\nThese models was developed using some algorithms libraries, such as "+
                  "OpenCV, Scikit Learn, Tensorflow, Keras, Pytorch, and more! "+
-                 "\nFeel free to contact me to ask questions and chat!")
-
-    # tab_breast, tab_cv, tab_rentals = st.tabs(["Breast", "Computer Vision", "Rentals"])
-
-    # with tab_breast:
-    #     if ("cv" in st.session_state) and ("rentals" in st.session_state):
-    #         st.session_state.pop("cv")
-    #         st.session_state.pop("rentals")
-    #     st.session_state["breast"] = "new_breast_state"
-    #     st.text("Dev")
-    #     breast_page()
-    # with tab_cv:
-    #     if ("breast" in st.session_state) and ("rentals" in st.session_state):
-    #         st.session_state.pop("breast")
-    #         st.session_state.pop("rentals")
-    #     st.session_state["cv"] = "new_cv_state"
-    #     st.text("Dev")
-    # with tab_rentals:
-    #     if ("cv" in st.session_state) and ("breast" in st.session_state):
-    #         st.session_state.pop("cv")
-    #         st.session_state.pop("breast")
-    #     st.session_state["breast"] = "new_rentals_state"
-    #     st.text("Dev")        
+                 "\nFeel free to contact me to ask questions and chat!")    
 
     st.sidebar.title("Sidebar")
     page = st.sidebar.radio("Select Page", ["Breast", "Computer Vision", "Rentals"])
